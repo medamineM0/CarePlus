@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>PATIENTS</title>
+		{% block javascripts %}
+			{% block importmap %}
+				{{ importmap('app') }}
+			{% endblock %}
+		{% endblock %}
+		{# <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon"> #}
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ asset ('css/style2.css') }}">
+	</head>
+
+	<body>
+		<div class="layer"></div>
+		<div class="page-flex">
+			{{ include('components/aside.html.twig') }}
+			<div class="main-wrapper">
+				{{ include('components/nav.html.twig') }}
+				<main class="main users chart-page" id="skip-target">
+					<div class="container p-lg-5">
+						<div class="d-flex justify-content-end m-lg-1">
+								<a href="{{ path ('add_patient') }}"><button class="btn btn-success" type="button">
+									<strong>New Patient</strong>
+								</button></a>
+						</div><br>
+						<div class="card mw-70 shadow border-0 mb-4 m-lg-1">
+							<div class="card-header py-3 d-flex border-0 flex-row align-items-center justify-content-between">
+								<h6 class="m-0 fw-bold text-white">CNI SEARCH</h6>
+							</div>
+							<div class="card-body">
+								{{component ('PatientSearch',{searchType:'cni'})}}
+							</div>
+						</div>
+						<br><br><br>
+						<div class="card mw-70 shadow border-0 mb-4 m-lg-1">
+							<div class="card-header py-3 d-flex border-0 flex-row align-items-center justify-content-between">
+								<h6 class="m-0 fw-bold text-white">FULLNAME SEARCH</h6>
+							</div>
+							<div class="card-body">
+								{{ component ('PatientSearch',{searchType:'FullName'})}}
+							</div>
+						</div>
+					</div>
+				</main>
+				{{ include('components/footer.html.twig') }}
+			</div>
+		</div>
+		<script src="{{ asset('js/chart.min.js') }}"></script>
+		<script src=" {{ asset('js/feather.min.js') }}"></script>
+		<script src="{{ asset('js/script2.js') }}"></script>
+	</body>
+
+</html>

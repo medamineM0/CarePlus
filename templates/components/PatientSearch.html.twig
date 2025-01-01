@@ -1,0 +1,57 @@
+<div{{attributes}}>
+	<div class="search-wrapper">
+		<i data-feather="search" aria-hidden="true"></i>
+		<input type="text" data-model="query" placeholder="Search ..." class="form-control"/>
+	</div>
+	<div class="table-responsive shadow" style="margin-top: 16px;">
+		<table class="table table-bordered mb-0" width="100%" cellspacing="0">
+			<thead style="color: #686D76;">
+				<tr>
+					<th>CNI</th>
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>DateOfBirth</th>
+					<th>Phone Number</th>
+					<th>Record</th>
+				</tr>
+			</thead>
+			<tbody class="table-data">
+			{% set results = searchType == 'cni' ? computed.getPatientsByCNI() : computed.getPatientsByName() %}
+					{% for p in results %}
+						<tr>
+							<td class="text-uppercase"><strong>{{p.cni}}</strong></td>
+							<td class="text-capitalize">{{p.nomPatient}}</td>
+							<td class="text-capitalize">{{p.prenomPatient}}</td>
+							<td>{{p.dateNaissance|date('d M Y')}}</td>
+							<td>{{p.adresse}}</td>
+							<td>
+								<a href="historique-consultation.php?n=1" class="btn btn-warning btn-circle" style="float:center">
+									<i class="fas fa-info-circle"></i>
+								</a>
+								<a href="#" class="btn btn-danger btn-circle" style="float:center;margin-left:5px;" data-toggle="modal" data-target="#supp1">
+									<i class="fas fa-trash"></i>
+								</a>
+								<div class="modal fade" id="supp1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">Supprimer un patient</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">Voulez-vous supprimer définitivement ce patient ?</div>
+											<div class="modal-footer">
+												<a href="#" class="btn btn-danger">Oui</a>
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Non</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+					{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

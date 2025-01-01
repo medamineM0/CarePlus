@@ -1,0 +1,322 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="{{ asset('img/stethoscope-line.png') }}" type="image/x-icon">
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<title>CAREPLUS</title>
+	</head>
+	<body>
+		<!--==================== HEADER ====================-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#" class="nav__logo">
+					<i class="ri-stethoscope-line nav__logo-icon"></i>
+					CAREPLUS
+				</a>
+				<div class="nav__menu" id="nav-menu">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#home" class="nav__link active-link">Home</a>
+						</li>
+						<li class="nav__item">
+							<a href="#about" class="nav__link">About</a>
+						</li>
+						<li class="nav__item">
+							<a href="#features" class="nav__link">Features</a>
+						</li>
+						<li class="nav__item">
+							<a href="#faqs" class="nav__link">FAQs</a>
+						</li>
+						<li class="nav__item">
+							<a href="#contact" class="nav__link">Contact Us</a>
+						</li>
+					</ul>
+
+					<div class="nav__close" id="nav-close">
+						<i class="ri-close-line"></i>
+					</div>
+				</div>
+
+				<div class="nav__btns">
+					<i class="ri-moon-line change-theme" id="theme-button"></i>
+					<div class="nav__toggle" id="nav-toggle">
+						<i class="ri-menu-line"></i>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main
+			class="main">
+			<!--==================== HOME ====================-->
+			<section class="home" id="home">
+				<div class="home__container container grid">
+					<img src="{{ asset('img/profil-doctor.png') }}" class="home__img">
+
+					<div class="home__data">
+						<h1 class="home__title">
+							<b>WELCOME TO<br>
+								CAREPLUS</b>
+						</h1>
+						<p class="home__description">
+							Manage your calendar with efficency
+						</p>
+						<a href="{{ path('dashboard') }}" class="button button--flex">
+							GET STARTED
+							<i class="ri-arrow-right-s-line button__icon"></i>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!--==================== ABOUT ====================-->
+			<section class="about section container" id="about">
+				<div class="about__container grid">
+					<img src="{{ asset('img/about.png') }}" alt="" class="about__img">
+
+					<div class="about__data">
+						<h2 class="section__title about__title">
+							Our Approach
+						</h2>
+
+						<p class="about__description">
+							This management system streamlines operations for medical cabinets, simplifying patient care, records, and billing. 
+														                            Enhance efficiency and focus more on your patients with our intuitive solution.
+						</p>
+
+						<div class="about__details">
+							<p class="about__details-description">
+								<i class="ri-checkbox-fill about__details-icon"></i>
+								Refined management across all medical specialties.
+							</p>
+							<p class="about__details-description">
+								<i class="ri-checkbox-fill about__details-icon"></i>
+								Enhanced security safeguards patient data.
+							</p>
+							<p class="about__details-description">
+								<i class="ri-checkbox-fill about__details-icon"></i>
+								Empowered ease-of-use simplifies complex tasks.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--==================== features ====================-->
+			<section class="features section container" id="features">
+				<div class="features__bg">
+					<h2 class="section__title-center features__title">
+						HIGHLIGHTED FEATURES
+					</h2>
+					<div class="features__container grid">
+						<div class="features__card">
+							<div class="features__card-number">
+								<i class="ri-dossier-line"></i>
+							</div>
+							<h3 class="features__card-title">Medical records</h3>
+							<p class="features__card-description">
+								Track your patients' health status with pinpoint accuracy through detailed medical records.
+							</p>
+						</div>
+
+						<div class="features__card">
+							<div class="features__card-number">
+								<i class="ri-calendar-line"></i>
+							</div>
+							<h3 class="features__card-title">Advanced scheduling coordination</h3>
+							<p class="features__card-description">
+								Efficiently manage key dates and appointments with calendar integration.
+							</p>
+						</div>
+
+						<div class="features__card">
+							<div class="features__card-number">
+								<i class="ri-money-dollar-circle-line"></i>
+							</div>
+							<h3 class="features__card-title">Billing and Payments</h3>
+							<p class="features__card-description">
+								Keep a close eye on your financial status with effective, detailed invoice management.
+							</p>
+						</div>
+
+						<div class="features__card">
+							<div class="features__card-number">
+								<i class="ri-line-chart-line"></i>
+							</div>
+							<h3 class="features__card-title">Get plants delivered</h3>
+							<p class="features__card-description">
+								Our delivery process is easy, you receive the plant direct to your door.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br><br><br><br>
+			<!--==================== QUESTIONS ====================-->
+			<section class="questions section" id="faqs">
+				<h2 class="section__title-center questions__title container">
+					Some common questions
+					<br>
+					were often asked
+				</h2>
+
+				<div class="questions__container container grid">
+					<div class="questions__group">
+						<div class="questions__item">
+							<header class="questions__header">
+								<i class="ri-add-line questions__icon"></i>
+								<h3 class="questions__item-title">
+									What services do you offer ?
+								</h3>
+							</header>
+
+							<div class="questions__content">
+								<p class="questions__description">
+									We provide a comprehensive range of services including appointment scheduling and
+																		                                    patient record management.
+								</p>
+							</div>
+						</div>
+
+						<div class="questions__item">
+							<header class="questions__header">
+								<i class="ri-add-line questions__icon"></i>
+								<h3 class="questions__item-title">
+									What kind of statistics can be tracked on dashboard?
+
+								</h3>
+							</header>
+
+							<div class="questions__content">
+								<p class="questions__description">
+									Our dashboard provides insights into appointment trends, patient demographics, revenue reports, 
+																	    and other key metrics that help you monitor and optimize your practice's performance.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="questions__group">
+						<div class="questions__item">
+							<header class="questions__header">
+								<i class="ri-add-line questions__icon"></i>
+								<h3 class="questions__item-title">
+									How does your platform simplify daily management?
+								</h3>
+							</header>
+
+							<div class="questions__content">
+								<p class="questions__description">
+									Our platform centralizes all your administrative tasks, allowing you to save time and focus more on your patients 
+																		 by automating processes.
+								</p>
+							</div>
+						</div>
+
+						<div class="questions__item">
+							<header class="questions__header">
+								<i class="ri-add-line questions__icon"></i>
+								<h3 class="questions__item-title">
+									Is there a free trial period available?
+								</h3>
+							</header>
+
+							<div class="questions__content">
+								<p class="questions__description">
+									Yes, we offer a 30-day free trial, allowing you to explore our platform's features without any commitment. 
+																		Sign up on our website to get started.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--==================== CONTACT ====================-->
+			<section class="contact section container" id="contact">
+				<div class="contact__container grid">
+					<div class="contact__box">
+						<h2 class="section__title">
+							Reach out to us today
+							<br>
+							via any of the given
+							<br>
+							information
+						</h2>
+
+						<div class="contact__data">
+							<div class="contact__information">
+								<h3 class="contact__subtitle">Call us for instant support</h3>
+								<span class="contact__description">
+									<i class="ri-phone-line contact__icon"></i>
+									+999 888 777
+								</span>
+							</div>
+
+							<div class="contact__information">
+								<h3 class="contact__subtitle">Write us by mail</h3>
+								<span class="contact__description">
+									<i class="ri-mail-line contact__icon"></i>
+									user@email.com
+								</span>
+							</div>
+						</div>
+					</div>
+
+					<form action="" class="contact__form">
+						<div class="contact__inputs">
+							<div class="contact__content">
+								<input type="email" placeholder=" " class="contact__input">
+								<label for="" class="contact__label">Email</label>
+							</div>
+
+							<div class="contact__content">
+								<input type="text" placeholder=" " class="contact__input">
+								<label for="" class="contact__label">Subject</label>
+							</div>
+
+							<div class="contact__content contact__area">
+								<textarea name="message" placeholder=" " class="contact__input"></textarea>
+								<label for="" class="contact__label">Message</label>
+							</div>
+						</div>
+
+						<button class="button button--flex">
+							Send Message
+							<i class="ri-arrow-right-up-line button__icon"></i>
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<br><br>
+		<!--==================== FOOTER ====================-->
+		<footer class="footer__banner">
+			<p class="footer__copy">MDAmineMo</p>
+			<p class="footer__copy">&#169; 2024 CarePlus | All rigths reserved</p>
+			<ul class="footer__ul">
+				<div class="footer__social">
+					<a href="https://www.facebook.com/" class="footer__social-link">
+						<i class="ri-facebook-fill"></i>
+					</a>
+					<a href="https://www.instagram.com/" class="footer__social-link">
+						<i class="ri-instagram-line"></i>
+					</a>
+					<a href="https://github.com/" class="footer__social-link">
+						<i class="ri-github-fill"></i>
+					</a>
+				</div>
+			</ul>
+		</footer>
+
+		<!--=============== SCROLL UP ===============-->
+		<a href="#" class="scrollup" id="scroll-up">
+			<i class="ri-arrow-up-fill scrollup__icon"></i>
+		</a>
+		<br>
+		<!--== SCRIPTS ==-->
+		<script src="{{ asset('js/scrollreveal.min.js') }}"></script>
+		<script src="{{ asset('js/script.js') }}"></script>
+
+	</body>
+</html>
